@@ -13,4 +13,5 @@ export const styles = StyleSheet.create({
     marginTop: getStatusBarHeight() + 26,
     marginBottom: 42,
   },
+  categorySelect: {},
 });

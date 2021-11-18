@@ -8,7 +8,7 @@ import {
   Rajdhani_700Bold,
 } from "@expo-google-fonts/rajdhani";
 
-import { Background } from "./src/components/Background";
+//import { Background } from "./src/components/Background";
 
 import { Routes } from "./src/routes";
 
@@ -25,9 +25,9 @@ export default function App() {
   }
 
   return (
-    <Background>
+    <>
       <StatusBar style="light" />
       <Routes />
-    </Background>
+    </>
   );
 }
