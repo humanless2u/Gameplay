@@ -12,7 +12,6 @@ export function SignIn() {
   const navigation = useNavigation();
 
   const handleSignIn = () => {
-    console.log("handleSignIn");
     navigation.navigate("Home");
   };
 

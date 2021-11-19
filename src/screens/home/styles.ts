@@ -14,4 +14,7 @@ export const styles = StyleSheet.create({
     marginBottom: 42,
   },
   categorySelect: {},
+  content: {
+    marginTop: 42,
+  },
 });
