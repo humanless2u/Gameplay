@@ -32,7 +32,7 @@ export function Home() {
     {
       id: "2",
       guild: {
-        id: "1",
+        id: "2",
         name: "Invictors",
         icon: null,
         owner: false,
@@ -49,9 +49,11 @@ export function Home() {
 
   const navigation = useNavigation();
 
-  function HandleAppointmentsDetails(appointmentId: string) {
-    console.log(appointmentId);
+  function handleAppointmentsDetails() {
     navigation.navigate("AppointmentsDetails");
+  }
+  function handleAppointmentsCreate() {
+    navigation.navigate("AppointmentsCreate");
   }
 
   return (
@@ -59,7 +61,7 @@ export function Home() {
       <View style={styles.container}>
         <View style={styles.header}>
           <Profile />
-          <ButtonAdd />
+          <ButtonAdd onPress={handleAppointmentsCreate} />
         </View>
 
         <View style={styles.categorySelect}>
@@ -70,13 +72,13 @@ export function Home() {
         </View>
 
         <View style={styles.content}>
-          <ListHeader title="Partidas Agendades" subtitle="Total 6" />
+          <ListHeader title="Partidas Agendadas" subtitle="Total 6" />
 
           <FlatList
             data={appointments}
             keyExtractor={(item) => item.id}
             renderItem={({ item }) => (
-              <Appointments data={item} onPress={HandleAppointmentsDetails} />
+              <Appointments data={item} onPress={handleAppointmentsDetails} />
             )}
             ItemSeparatorComponent={() => <ListDivider />}
           />

@@ -14,7 +14,7 @@ import { Member } from "../../components/Member";
 import { ListDivider } from "../../components/ListDivider";
 import { ButtonIcon } from "../../components/ButtonIcon";
 
-export function AppointmentsDetails() {
+export function AppointmentsCreate() {
   const members = [
     {
       id: 1,
@@ -38,7 +38,7 @@ export function AppointmentsDetails() {
   return (
     <Background>
       <Header
-        title="Detalhes"
+        title="Criar Partida"
         action={
           <BorderlessButton>
             <Fontisto name="share" size={24} color={theme.colors.primary} />
@@ -46,22 +46,6 @@ export function AppointmentsDetails() {
         }
       />
 
-      <ImageBackground source={BannerImg} style={styles.banner}>
-        <View style={styles.bannerContent}>
-          <Text style={styles.title}>Lendarios</Text>
-          <Text style={styles.subtitle}>É hoje que o coro come</Text>
-        </View>
-      </ImageBackground>
-
-      <ListHeader title="Jogadores" subtitle="Total 3" />
-
-      <FlatList
-        data={members}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <Member data={item} />}
-        ItemSeparatorComponent={ListDivider}
-        style={styles.members}
-      />
       <View style={styles.footer}>
         <ButtonIcon title="Entrar na partida" />
       </View>

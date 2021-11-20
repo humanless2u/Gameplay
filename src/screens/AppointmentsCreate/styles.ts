@@ -34,6 +34,6 @@ export const styles = StyleSheet.create({
   footer: {
     paddingHorizontal: 24,
     paddingVertical: 20,
-    paddingBottom: getBottomSpace() + 26,
+    // paddingBottom: getBottomSpace(),
   },
 });
