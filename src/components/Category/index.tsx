@@ -5,7 +5,6 @@ import { LinearGradient } from "expo-linear-gradient";
 import { RectButton, RectButtonProps } from "react-native-gesture-handler";
 
 import { styles } from "./styles";
-import { categories } from "../../utils/categories";
 import { theme } from "../../global/theme";
 
 type Props = RectButtonProps & {
