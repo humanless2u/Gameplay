@@ -1,8 +1,10 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { TextInput, TextInputProps } from "react-native";
 
 import { styles } from "./styles";
 
-export function Profile() {
-  return <View style={styles.container}></View>;
+export function SmallInput({ ...rest }: TextInputProps) {
+  return (
+    <TextInput keyboardType="numeric" style={styles.container} {...rest} />
+  );
 }
